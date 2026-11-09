@@ -1,0 +1,514 @@
+/* =============================================================================
+   MODO OSCURO - Clínica Vida Salud
+   Se activa con <html data-tema="oscuro"> cuando la Configuración → Apariencia
+   tiene el interruptor "Modo oscuro" encendido (clave tema_modo).
+   Cubre la portada pública (app.css + inicio.css) y el panel del portal.
+   ============================================================================= */
+
+html[data-tema="oscuro"] {
+    color-scheme: dark;
+
+    /* Portada: hereda app.css e inicio.css */
+    --med-ink: #e7eef4;
+    --med-muted: #9db0be;
+    --med-light: #0d141b;
+    --med-line: #22303c;
+    --med-accent: color-mix(in srgb, var(--med-primary) 24%, #0d141b);
+
+    --cl-ink: #e7eef4;
+    --cl-muted: #9db0be;
+    --cl-light: #0d141b;
+    --cl-line: #22303c;
+    --cl-accent: color-mix(in srgb, var(--cl-primary) 24%, #0d141b);
+    --cl-white: #141d26;
+    --cl-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+    --cl-shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.55);
+}
+
+/* ---------------------------------------------------------------- Portada -- */
+
+html[data-tema="oscuro"] body {
+    background: var(--cl-light);
+    color: var(--cl-ink);
+}
+
+html[data-tema="oscuro"] .cl-topbar {
+    background: #08111a;
+}
+
+html[data-tema="oscuro"] .cl-nav {
+    background: rgba(13, 20, 27, 0.96);
+}
+
+html[data-tema="oscuro"] .cl-nav.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+html[data-tema="oscuro"] .cl-hero-has-bg {
+    background: linear-gradient(135deg, rgba(13, 20, 27, 0.94) 0%, rgba(20, 29, 38, 0.94) 100%);
+}
+
+html[data-tema="oscuro"] .cl-especialidad-card,
+html[data-tema="oscuro"] .cl-medico-card,
+html[data-tema="oscuro"] .cl-search-input input,
+html[data-tema="oscuro"] .cl-select {
+    background: var(--cl-white);
+    border-color: var(--cl-line);
+    color: var(--cl-ink);
+}
+
+html[data-tema="oscuro"] .cl-especialidad-card:hover,
+html[data-tema="oscuro"] .cl-medico-card:hover {
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+}
+
+html[data-tema="oscuro"] .cl-search-input input::placeholder {
+    color: var(--cl-muted);
+}
+
+html[data-tema="oscuro"] .cl-medico-avatar {
+    background: linear-gradient(135deg, var(--cl-accent) 0%, var(--cl-white) 100%);
+}
+
+html[data-tema="oscuro"] .cl-medico-destacado {
+    border-color: color-mix(in srgb, var(--cl-primary) 55%, #0d141b);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+html[data-tema="oscuro"] .cl-footer,
+html[data-tema="oscuro"] .cl-contact {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+html[data-tema="oscuro"] .cl-footer a,
+html[data-tema="oscuro"] .cl-contact a {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+/* Formularios de la portada */
+html[data-tema="oscuro"] input,
+html[data-tema="oscuro"] textarea,
+html[data-tema="oscuro"] select {
+    background: var(--cl-white);
+    color: var(--cl-ink);
+    border-color: var(--cl-line);
+}
+
+html[data-tema="oscuro"] input::placeholder,
+html[data-tema="oscuro"] textarea::placeholder {
+    color: var(--cl-muted);
+}
+
+/* ------------------------------------------------------- Panel del portal -- */
+
+html[data-tema="oscuro"] body {
+    background: #0d141b;
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .portal-navbar {
+    background: #141d26;
+    border-bottom-color: #22303c;
+    box-shadow: none;
+}
+
+html[data-tema="oscuro"] .portal-user-name {
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .portal-sidebar-toggle {
+    background: #141d26;
+    border-color: #22303c;
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .portal-sidebar-toggle:hover {
+    background: #1c2833;
+    color: var(--portal-primary);
+}
+
+html[data-tema="oscuro"] .portal-content {
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .portal-footer {
+    background: #141d26;
+    border-top-color: #22303c;
+    color: #9db0be;
+}
+
+html[data-tema="oscuro"] .portal-card {
+    background: #141d26;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+html[data-tema="oscuro"] .portal-card:hover {
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+}
+
+html[data-tema="oscuro"] h1,
+html[data-tema="oscuro"] h2,
+html[data-tema="oscuro"] h3,
+html[data-tema="oscuro"] h4,
+html[data-tema="oscuro"] h5,
+html[data-tema="oscuro"] h6 {
+    color: #e7eef4;
+}
+
+/* Componentes Bootstrap usados en el portal */
+html[data-tema="oscuro"] .form-control {
+    background: #0f1821;
+    border-color: #22303c;
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .form-control:focus {
+    background: #0f1821;
+    border-color: var(--portal-primary);
+    color: #e7eef4;
+    box-shadow: 0 0 0 0.2rem rgba(15, 139, 132, 0.25);
+}
+
+html[data-tema="oscuro"] .form-control::placeholder {
+    color: #9db0be;
+}
+
+html[data-tema="oscuro"] .form-control:disabled,
+html[data-tema="oscuro"] .form-control[readonly] {
+    background: #131c25;
+    color: #9db0be;
+}
+
+html[data-tema="oscuro"] .input-group-text {
+    background: #131c25;
+    border-color: #22303c;
+    color: #9db0be;
+}
+
+html[data-tema="oscuro"] .form-control + .input-group-text,
+html[data-tema="oscuro"] .input-group-prepend .input-group-text {
+    border-right-color: #22303c;
+}
+
+html[data-tema="oscuro"] .btn-outline-secondary {
+    color: #9db0be;
+    border-color: #22303c;
+}
+
+html[data-tema="oscuro"] .btn-outline-secondary:hover {
+    background: #1c2833;
+    border-color: #2c3e4e;
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .btn-outline-danger {
+    color: #ff6b6b;
+    border-color: #4a2430;
+}
+
+html[data-tema="oscuro"] .btn-outline-danger:hover {
+    background: #2a1119;
+    border-color: #6b2f3d;
+    color: #ffd1d1;
+}
+
+html[data-tema="oscuro"] .btn-light {
+    background: #1c2833;
+    border-color: #22303c;
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .btn-light:hover {
+    background: #26333f;
+    border-color: #2c3e4e;
+    color: #fff;
+}
+
+html[data-tema="oscuro"] .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+html[data-tema="oscuro"] .modal-content,
+html[data-tema="oscuro"] .dropdown-menu {
+    background: #141d26;
+    color: #e7eef4;
+    border-color: #22303c;
+}
+
+html[data-tema="oscuro"] .dropdown-item {
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .dropdown-item:hover,
+html[data-tema="oscuro"] .dropdown-item:focus {
+    background: #1c2833;
+    color: #fff;
+}
+
+html[data-tema="oscuro"] .modal-header,
+html[data-tema="oscuro"] .modal-footer {
+    border-color: #22303c;
+}
+
+html[data-tema="oscuro"] .text-body,
+html[data-tema="oscuro"] .text-muted {
+    color: #9db0be !important;
+}
+
+html[data-tema="oscuro"] .table {
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .table-bordered,
+html[data-tema="oscuro"] .table-bordered td,
+html[data-tema="oscuro"] .table-bordered th {
+    border-color: #22303c;
+}
+
+html[data-tema="oscuro"] .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+html[data-tema="oscuro"] .bg-white,
+html[data-tema="oscuro"] .bg-light {
+    background-color: #141d26 !important;
+}
+
+html[data-tema="oscuro"] .border,
+html[data-tema="oscuro"] .border-top,
+html[data-tema="oscuro"] .border-bottom,
+html[data-tema="oscuro"] .border-left,
+html[data-tema="oscuro"] .border-right {
+    border-color: #22303c !important;
+}
+
+html[data-tema="oscuro"] .list-group-item {
+    background: #141d26;
+    border-color: #22303c;
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .alert-light {
+    background: #1c2833;
+    border-color: #22303c;
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .card,
+html[data-tema="oscuro"] .card-body {
+    background: #141d26;
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .card-header {
+    background: #1a2430;
+    border-bottom-color: #22303c;
+}
+
+/* Breadcrumbs, tooltips y scrollbars */
+html[data-tema="oscuro"] .breadcrumb {
+    background: #141d26;
+}
+
+html[data-tema="oscuro"] .breadcrumb-item a {
+    color: #9db0be;
+}
+
+html[data-tema="oscuro"] .breadcrumb-item.active {
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .page-link {
+    background: #141d26;
+    border-color: #22303c;
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .page-item.active .page-link {
+    background: var(--portal-primary);
+    border-color: var(--portal-primary);
+    color: #fff;
+}
+
+html[data-tema="oscuro"] .btn:disabled,
+html[data-tema="oscuro"] .btn.disabled {
+    opacity: 0.55;
+}
+
+html[data-tema="oscuro"] ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+html[data-tema="oscuro"] ::-webkit-scrollbar-track {
+    background: #0d141b;
+}
+
+html[data-tema="oscuro"] ::-webkit-scrollbar-thumb {
+    background: #2c3e4e;
+    border-radius: 8px;
+}
+
+html[data-tema="oscuro"] ::-webkit-scrollbar-thumb:hover {
+    background: #3c5064;
+}
+
+
+/* ------------------------------------------------- Configuración (panel) -- */
+
+html[data-tema="oscuro"] .cfg-tabs .nav-link {
+    background: #141d26;
+    border-color: #22303c;
+    color: #9db0be;
+}
+
+html[data-tema="oscuro"] .cfg-tabs .nav-link.active {
+    background: var(--portal-primary);
+    border-color: var(--portal-primary);
+    color: #fff;
+}
+
+html[data-tema="oscuro"] .cfg-card {
+    background: #141d26;
+    border-color: #22303c;
+}
+
+html[data-tema="oscuro"] .cfg-card-head h5,
+html[data-tema="oscuro"] .cfg-card-head strong {
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .cfg-card-head p {
+    color: #9db0be;
+}
+
+html[data-tema="oscuro"] .cfg-preset {
+    background: #141d26;
+    border-color: #22303c;
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .cfg-preset:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+html[data-tema="oscuro"] .cfg-preset-colors {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+html[data-tema="oscuro"] .cfg-servicio {
+    background: #101921;
+    border-color: #22303c;
+}
+
+html[data-tema="oscuro"] .cfg-contexto {
+    background: color-mix(in srgb, var(--portal-primary) 16%, #0d141b);
+    border-color: color-mix(in srgb, var(--portal-primary) 55%, #0d141b);
+    color: #b9d5d1;
+}
+
+html[data-tema="oscuro"] .cfg-contexto strong {
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .cfg-preview-card {
+    background: #141d26;
+    border-color: #22303c;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
+}
+
+html[data-tema="oscuro"] .cfg-preview-card-head {
+    background: #1a2430;
+    border-bottom-color: #22303c;
+}
+
+html[data-tema="oscuro"] .cfg-preview-card-head p,
+html[data-tema="oscuro"] .cfg-preview-toolbar small {
+    color: #9db0be;
+}
+
+html[data-tema="oscuro"] .cfg-frame-wrap {
+    background: #0d141b;
+}
+
+html[data-tema="oscuro"] .cfg-frame-wrap.cfg-frame-cargando::after {
+    background: rgba(13, 20, 27, 0.92);
+    border-top-color: #22303c;
+    color: #9db0be;
+}
+
+html[data-tema="oscuro"] #cfg-frame {
+    background: #0d141b;
+}
+
+html[data-tema="oscuro"] .cfg-preview-toolbar {
+    background: #141d26;
+    border-top-color: #22303c;
+}
+
+html[data-tema="oscuro"] .cfg-savebar {
+    background: rgba(20, 29, 38, 0.96);
+    border-color: #22303c;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.5);
+}
+
+html[data-tema="oscuro"] .cfg-savebar small {
+    color: #9db0be;
+}
+
+html[data-tema="oscuro"] .cfg-hero-preview {
+    background: #101921;
+    border-color: #22303c;
+    color: #6b7c83;
+}
+
+html[data-tema="oscuro"] .cfg-preview {
+    background: linear-gradient(135deg, #141d26 0%, color-mix(in srgb, var(--cfg-primary) 24%, #141d26) 100%);
+    border-color: #22303c;
+}
+
+html[data-tema="oscuro"] .cfg-preview-body h3 {
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .cfg-preview-body p {
+    color: #9db0be;
+}
+
+html[data-tema="oscuro"] .cfg-preview-stats span {
+    background: #101921;
+    border-color: #22303c;
+    color: #9db0be;
+}
+
+html[data-tema="oscuro"] .cfg-permiso {
+    background: #101921;
+    border-color: #22303c;
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .cfg-permiso small {
+    color: #9db0be;
+}
+
+html[data-tema="oscuro"] .custom-control-label {
+    color: #e7eef4;
+}
+
+html[data-tema="oscuro"] .custom-control-label::before {
+    background-color: #33475b;
+    border-color: #47576b;
+}
+
+html[data-tema="oscuro"] .custom-control-input:checked~.custom-control-label::before {
+    background-color: var(--portal-primary);
+    border-color: var(--portal-primary);
+}
+
+html[data-tema="oscuro"] code {
+    color: #7fd8cf;
+}
+
+html[data-tema="oscuro"] .text-primary {
+    color: #5ec8bf !important;
+}

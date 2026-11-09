@@ -1,0 +1,157 @@
+/*
+ * Ajustes del sistema (se carga despues de AdminLTE).
+ *
+ * Contraste AA: Bootstrap 4 usa #007bff con texto blanco (4.04:1, no cumple
+ * WCAG AA para texto normal). Con #0062cc el contraste sube a ~5.8:1.
+ */
+.btn-primary {
+    background-color: #0062cc;
+    border-color: #0062cc;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004a99;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 98, 204, 0.5);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active {
+    background-color: #004a99;
+    border-color: #00439e;
+}
+
+.btn-outline-primary {
+    color: #0062cc;
+    border-color: #0062cc;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0062cc;
+    border-color: #0062cc;
+}
+
+.btn-link {
+    color: #0062cc;
+}
+
+/*
+ * Responsive del panel de administracion.
+ */
+@media (max-width: 767.98px) {
+    /* Navbar: ocultar fecha/hora para liberar espacio en movil. */
+    .main-header.navbar .nav-item .nav-link {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+
+    .main-header.navbar #reloj,
+    .main-header.navbar .nav-item:first-child + .nav-item + .nav-item .nav-link {
+        display: none;
+    }
+
+    /* Content: menos padding en pantallas chicas. */
+    .content-wrapper,
+    .main-footer {
+        margin-left: 0;
+    }
+
+    .content-wrapper .content-header {
+        padding: .5rem .75rem;
+    }
+
+    .content-wrapper .content {
+        padding: .75rem;
+    }
+
+    /* Titulos y breadcrumb: evitar desborde. */
+    .content-header h1 {
+        font-size: 1.25rem;
+    }
+
+    .content-header .breadcrumb {
+        background: transparent;
+        padding: 0;
+        margin-top: .25rem;
+    }
+
+    /* Tablas: scroll horizontal en vez de romper el layout. */
+    .table-responsive {
+        border: 0;
+    }
+
+    /* Small boxes: texto mas compacto. */
+    .small-box h3 {
+        font-size: 1.6rem;
+    }
+
+    .small-box p {
+        font-size: .8rem;
+    }
+
+    /* Modal: que quepa bien en movil. */
+    .modal-dialog {
+        margin: .5rem;
+    }
+
+    /* Pre de codigo (generadores): no forzar ancho fijo. */
+    pre#gen-preview,
+    .modal pre {
+        font-size: .7rem !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    /* Navbar: ocultar tambien "Ver sitio" si queda muy apretado. */
+    .main-header.navbar .d-none.d-sm-inline-block {
+        display: none !important;
+    }
+
+    /* Breadcrumb: mostrar solo el item activo. */
+    .content-header .breadcrumb-item:not(.active) {
+        display: none;
+    }
+
+    .content-header .breadcrumb-item.active + .breadcrumb-item::before {
+        display: none;
+    }
+}
+
+/*
+ * Asegura que las tablas del panel sean scrollables en movil aunque no
+ * tengan .table-responsive (las vistas antiguas no lo envuelven siempre).
+ */
+@media (max-width: 767.98px) {
+    .card-body > .table,
+    .card .table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/*
+ * Tabs (nav-tabs + tab-content): reglas de Bootstrap 4 que el proceso de
+ * purga de AdminLTE elimino (.tab-pane / .tab-content no estan en
+ * adminlte.purged.min.css). Sin ellas todos los .tab-pane quedan visibles
+ * y se apilan verticalmente, empujando las pestañas "Crear" muy abajo.
+ */
+.tab-content > .tab-pane {
+    display: none;
+}
+
+.tab-content > .active {
+    display: block;
+}
+
+.fade {
+    transition: opacity .15s linear;
+}
+
+.fade:not(.show) {
+    opacity: 0;
+}

@@ -1,0 +1,25 @@
+# Entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Dependencias
+vendor/
+base.sql
+baseDatos.png
+
+# Almacenamiento local (cachés, logs, subidas)
+storage/*
+!storage/.gitkeep
+desplegar/
+
+# Logs y temporales
+*.log
+*.cache
+*.tmp
+
+# IDEs / sistema operativo
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

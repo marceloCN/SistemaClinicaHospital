@@ -1,0 +1,67 @@
+.gestion-nav-pills {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .35rem;
+    padding: .35rem;
+}
+
+.gestion-nav-pills .nav-link {
+    color: #495057;
+    border-radius: .25rem;
+    padding: .45rem .9rem;
+    font-weight: 500;
+}
+
+.gestion-nav-pills .nav-link:hover {
+    background: #eef3f8;
+    color: #0056b3;
+}
+
+.gestion-nav-pills .nav-link.active {
+    background: #007bff;
+    color: #fff;
+}
+
+.gestion-nav-pills .nav-item + .nav-item {
+    margin-left: .25rem;
+}
+
+#tabla-usuarios td,
+#tabla-usuarios th {
+    vertical-align: middle;
+}
+
+.rol-grupo-permisos .card-header {
+    background: #f8f9fa;
+}
+
+.rol-grupo-permisos .custom-control {
+    margin-bottom: .15rem;
+}
+
+.rol-grupo-permisos code {
+    font-size: .8rem;
+}
+
+.js-permiso-rol:disabled + label {
+    opacity: .85;
+}
+
+.table .btn-xs {
+    padding: .12rem .4rem;
+    font-size: .75rem;
+}
+
+.small-box .inner p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 575.98px) {
+    .gestion-nav-pills {
+        flex-wrap: wrap;
+    }
+
+    .gestion-nav-pills .nav-item {
+        margin-bottom: .25rem;
+    }
+}

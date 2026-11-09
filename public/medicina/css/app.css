@@ -1,0 +1,96 @@
+:root {
+    --med-primary: #0f8b84;
+    --med-primary-dark: #0a6b67;
+    --med-ink: #0b2a38;
+    --med-muted: #5d7078;
+    --med-light: #f7f9f6;
+    --med-line: #dfe8e5;
+    --med-accent: #e6f5f2;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+    color: var(--med-ink);
+    background: #ffffff;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: 'Manrope', 'Segoe UI', Roboto, Arial, sans-serif;
+    color: inherit;
+    line-height: 1.15;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: var(--med-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--med-primary-dark);
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+::selection {
+    background: var(--med-primary);
+    color: #ffffff;
+}
+
+:focus-visible {
+    outline: 2px solid var(--med-primary);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
